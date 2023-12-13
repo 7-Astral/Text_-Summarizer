@@ -2,9 +2,8 @@ import os
 from transformers import AutoTokenizer
 from datasets import load_from_disk
 from textSummarizer.entity import Data_Transformation_Config
-
 class Data_Transformation():
-    def __init__(self,config=Data_Transformation_Config):
+    def __init__(self,config:Data_Transformation_Config):
         self.config=config
         self.tokenizer = AutoTokenizer.from_pretrained(config.tokenizer_name)
     
